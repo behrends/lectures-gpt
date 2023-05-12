@@ -177,7 +177,14 @@ const CourseSearch = () => {
     } else if (language === 'Deutsch') {
       setCourseList(coursesGerman);
     }
-  }, [language]);
+
+    if (selectedCourse) {
+      const updatedSelectedCourse = courseList.find(
+        (course) => course.id === selectedCourse.id
+      );
+      setSelectedCourse(updatedSelectedCourse);
+    }
+  }, [language, courseList, selectedCourse]);
 
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
