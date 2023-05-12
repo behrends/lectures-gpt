@@ -227,7 +227,10 @@ const CourseSearch = () => {
             </ul>
           </div>
           <div className="bg-white p-4 shadow-lg rounded-lg">
-            <CourseDetails course={selectedCourse} />
+            <CourseDetails
+              course={selectedCourse}
+              language={language}
+            />
           </div>
         </div>
       </div>

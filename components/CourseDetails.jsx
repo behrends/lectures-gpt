@@ -1,28 +1,42 @@
-const CourseDetails = ({ course }) => {
+const CourseDetails = ({ course, language }) => {
   if (!course) {
     return (
-      <div className="italic">
-        Select a course to see its details.
+      <div>
+        <p className="text-xl font-semibold">
+          {language === 'English'
+            ? 'Please select a course'
+            : 'Bitte wählen Sie einen Kurs'}
+        </p>
       </div>
     );
   }
 
   return (
-    <div className="mt-4">
-      <h2 className="text-2xl font-semibold mb-2">{course.name}</h2>
+    <div>
+      <h2 className="text-2xl font-semibold">{course.name}</h2>
       <p>{course.description}</p>
-      <p className="mt-2">
-        <strong>Instructor:</strong> {course.instructor}
+      <p>
+        {language === 'English' ? 'Instructor:' : 'Dozent:'}{' '}
+        {course.instructor}
       </p>
       <p>
-        <strong>Credits:</strong> {course.credits}
+        {language === 'English' ? 'Credits:' : 'Credits:'}{' '}
+        {course.credits}
       </p>
-      <p>
-        <strong>Prerequisites:</strong>{' '}
-        {course.prerequisites.length > 0
-          ? course.prerequisites.join(', ')
-          : 'None'}
-      </p>
+      {course.prerequisites.length > 0 && (
+        <>
+          <p>
+            {language === 'English'
+              ? 'Prerequisites:'
+              : 'Voraussetzungen:'}
+          </p>
+          <ul>
+            {course.prerequisites.map((prerequisite, index) => (
+              <li key={index}>{prerequisite}</li>
+            ))}
+          </ul>
+        </>
+      )}
     </div>
   );
 };
