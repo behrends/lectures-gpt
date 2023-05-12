@@ -79,17 +79,105 @@ const courses = [
   },
 ];
 
+const coursesGerman = [
+  {
+    id: 1,
+    name: 'Einführung in die Informatik',
+    description:
+      'Ein einführender Kurs, der die Grundlagen der Informatik, Programmierung und Problemlösungstechniken behandelt.',
+    instructor: 'Prof. John Doe',
+    credits: 3,
+    prerequisites: [],
+  },
+  {
+    id: 2,
+    name: 'Datenstrukturen und Algorithmen',
+    description:
+      'Eine umfassende Untersuchung von Datenstrukturen und Algorithmen, einschließlich ihrer Entwurf, Analyse und Implementierung.',
+    instructor: 'Dr. Jane Smith',
+    credits: 4,
+    prerequisites: ['Einführung in die Informatik'],
+  },
+  {
+    id: 3,
+    name: 'Betriebssysteme',
+    description:
+      'Eine Untersuchung von Betriebssystemkonzepten, einschließlich Prozessverwaltung, Speicherverwaltung, Dateisysteme und Systemsicherheit.',
+    instructor: 'Dr. Alice Johnson',
+    credits: 4,
+    prerequisites: ['Einführung in die Informatik'],
+  },
+  {
+    id: 4,
+    name: 'Rechnernetze',
+    description:
+      'Eine Untersuchung der Prinzipien, Protokolle und Technologien von Rechnernetzen mit Schwerpunkt auf dem Internet und verwandten Systemen.',
+    instructor: 'Prof. Bob Brown',
+    credits: 4,
+    prerequisites: ['Einführung in die Informatik'],
+  },
+  {
+    id: 5,
+    name: 'Softwaretechnik',
+    description:
+      'Eine Einführung in Methoden, Werkzeuge und bewährte Verfahren der Softwaretechnik zur Gestaltung, Implementierung und Wartung von qualitativ hochwertiger Software.',
+    instructor: 'Prof. Mary Davis',
+    credits: 4,
+    prerequisites: ['Einführung in die Informatik'],
+  },
+  {
+    id: 6,
+    name: 'Künstliche Intelligenz',
+    description:
+      'Eine Übersicht über Konzepte, Techniken und Anwendungen der künstlichen Intelligenz, einschließlich Wissensrepräsentation, Suche, maschinelles Lernen und Robotik.',
+    instructor: 'Dr. Richard Wilson',
+    credits: 4,
+    prerequisites: ['Datenstrukturen und Algorithmen'],
+  },
+  {
+    id: 7,
+    name: 'Maschinelles Lernen',
+    description:
+      'Eine eingehende Untersuchung von Algorithmen und Techniken des maschinellen Lernens, einschließlich überwachter, unüberwachter und bestärkender Lernansätze.',
+    instructor: 'Dr. Susan Clark',
+    credits: 4,
+    prerequisites: [
+      'Datenstrukturen und Algorithmen',
+      'Wahrscheinlichkeit und Statistik',
+    ],
+  },
+  {
+    id: 8,
+    name: 'Computergrafik',
+    description:
+      'Ein Kurs, der sich auf die Prinzipien und Techniken der Computergrafik konzentriert, einschließlich 2D- und 3D-Rendering, Modellierung und Animation.',
+    instructor: 'Prof. James Taylor',
+    credits: 4,
+    prerequisites: ['Datenstrukturen und Algorithmen'],
+  },
+];
+
 const CourseSearch = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [search, setSearch] = useState('');
   const [filteredCourses, setFilteredCourses] = useState(courses);
   const [selectedCourse, setSelectedCourse] = useState(null);
+  const [language, setLanguage] = useState('English');
+  const [courseList, setCourseList] = useState(courses);
 
   useEffect(() => {
-    const results = courses.filter((course) =>
-      course.name.toLowerCase().includes(searchTerm.toLowerCase())
+    const result = courseList.filter((course) =>
+      course.name.toLowerCase().includes(search.toLowerCase())
     );
-    setFilteredCourses(results);
-  }, [searchTerm]);
+    setFilteredCourses(result);
+  }, [search, courseList]);
+
+  useEffect(() => {
+    if (language === 'English') {
+      setCourseList(courses);
+    } else if (language === 'Deutsch') {
+      setCourseList(coursesGerman);
+    }
+  }, [language]);
 
   const handleCourseClick = (course) => {
     setSelectedCourse(course);
@@ -98,17 +186,33 @@ const CourseSearch = () => {
   return (
     <div className="bg-gray-100 min-h-screen p-4">
       <div className="w-full max-w-2xl mx-auto">
+        <div className="flex justify-end">
+          <select
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            className="border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none"
+          >
+            <option value="English">English</option>
+            <option value="Deutsch">Deutsch</option>
+          </select>
+        </div>
         <h1 className="text-4xl font-semibold mb-4">
-          University Courses
+          {language === 'English'
+            ? 'University Courses'
+            : 'Universitätskurse'}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-4 shadow-lg rounded-lg">
             <input
               type="text"
-              placeholder="Search for a course..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md focus:border-blue-500 focus:outline-none"
+              placeholder={
+                language === 'English'
+                  ? 'Search courses...'
+                  : 'Kurse suchen...'
+              }
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none"
             />
             <ul className="mt-4 divide-y divide-gray-200">
               {filteredCourses.map((course) => (
