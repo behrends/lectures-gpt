@@ -236,26 +236,26 @@ const coursesByLanguage = {
 };
 
 const translations = {
-  English: {
-    searchPlaceholder: 'Search for a course...',
-    selectPrompt: 'Please select a course',
-    instructor: 'Instructor:',
-    credits: 'Credits:',
-    prerequisites: 'Prerequisites:',
+  en: {
+    searchPlaceholder: 'Search courses...',
+    instructor: 'Instructor',
+    credits: 'Credits',
+    prerequisites: 'Prerequisites',
+    selectPrompt: 'Select a course to see its details.',
   },
-  Deutsch: {
-    searchPlaceholder: 'Suche einen Kurs...',
-    selectPrompt: 'Bitte wählen Sie einen Kurs',
-    instructor: 'Dozent:',
-    credits: 'Credits:',
-    prerequisites: 'Voraussetzungen:',
+  de: {
+    searchPlaceholder: 'Kurse durchsuchen...',
+    instructor: 'Dozent',
+    credits: 'Kredits',
+    prerequisites: 'Voraussetzungen',
+    selectPrompt: 'Wählen Sie einen Kurs aus, um Details zu sehen.',
   },
-  Français: {
-    searchPlaceholder: 'Cherchez un cours...',
-    selectPrompt: 'Veuillez choisir un cours',
-    instructor: 'Instructeur:',
-    credits: 'Crédits:',
-    prerequisites: 'Prérequis:',
+  fr: {
+    searchPlaceholder: 'Chercher des cours...',
+    instructor: 'Instructeur',
+    credits: 'Crédits',
+    prerequisites: 'Prérequis',
+    selectPrompt: 'Sélectionnez un cours pour voir ses détails.',
   },
 };
 
