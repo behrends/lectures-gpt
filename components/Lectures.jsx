@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import CourseDetails from './CourseDetails';
+import LectureDetails from './LectureDetails';
+import LectureList from './LectureList';
 
-const coursesByLanguage = {
+const lectures = {
   en: [
     {
       id: 1,
@@ -264,91 +265,53 @@ const translations = {
   },
 };
 
-const CourseSearch = () => {
-  const [language, setLanguage] = useState('de');
+export default function Lectures() {
+  const [language, setLanguage] = useState('en');
   const [search, setSearch] = useState('');
-  const [filteredCourses, setFilteredCourses] = useState(
-    coursesByLanguage[language]
-  );
-  const [selectedCourse, setSelectedCourse] = useState(null);
-  const [courseList, setCourseList] = useState(
-    coursesByLanguage[language]
-  );
+  const [selectedLecture, setSelectedLecture] = useState(null);
+  const [lectureList, setLectureList] = useState(lectures[language]);
 
   useEffect(() => {
-    const result = courseList.filter((course) =>
-      course.name.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredCourses(result);
-  }, [search, courseList]);
-
-  useEffect(() => {
-    setCourseList(coursesByLanguage[language]);
-
-    if (selectedCourse) {
-      const updatedSelectedCourse = coursesByLanguage[language].find(
-        (course) => course.id === selectedCourse.id
-      );
-      setSelectedCourse(updatedSelectedCourse);
-    }
-  }, [language, selectedCourse]);
-
-  const handleCourseClick = (course) => {
-    setSelectedCourse(course);
-  };
+    setLectureList(lectures[language]);
+  }, [language]);
 
   return (
-    <div className="bg-gray-100 min-h-screen p-4">
-      <div className="w-full max-w-2xl mx-auto">
-        <div className="flex justify-end">
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl mb-4">
+        {translations[language].title}
+      </h1>
+      <div className="mb-4">
+        <label>
+          Language:
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-            className="border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none"
+            className="ml-2"
           >
-            <option value="de">Deutsch</option>
             <option value="en">English</option>
+            <option value="de">Deutsch</option>
             <option value="fr">Français</option>
           </select>
-        </div>
-        <h1 className="text-2xl mb-4">
-          {translations[language].title}
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="bg-white p-4 shadow-lg rounded-lg">
-            <input
-              className="border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none"
-              type="text"
-              placeholder={translations[language].searchPlaceholder}
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-            <ul className="mt-4 divide-y divide-gray-200">
-              {filteredCourses.map((course) => (
-                <li
-                  key={course.id}
-                  className={`py-2 cursor-pointer hover:bg-gray-100 ${
-                    selectedCourse && selectedCourse.id === course.id
-                      ? 'bg-blue-100'
-                      : ''
-                  }`}
-                  onClick={() => handleCourseClick(course)}
-                >
-                  {course.name}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-white p-4 shadow-lg rounded-lg">
-            <CourseDetails
-              course={selectedCourse}
-              translation={translations[language]}
-            />
-          </div>
-        </div>
+        </label>
       </div>
+      <input
+        type="text"
+        placeholder={translations[language].searchPlaceholder}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+      />
+      <LectureList
+        lectures={lectureList.filter((lecture) =>
+          lecture.name.toLowerCase().includes(search.toLowerCase())
+        )}
+        selectedLecture={selectedLecture}
+        onSelectLecture={setSelectedLecture}
+      />
+      <LectureDetails
+        lecture={selectedLecture}
+        translation={translations[language]}
+      />
     </div>
   );
-};
-
-export default CourseSearch;
+}
