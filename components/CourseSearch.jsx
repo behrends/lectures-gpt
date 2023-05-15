@@ -237,25 +237,30 @@ const coursesByLanguage = {
 
 const translations = {
   en: {
-    searchPlaceholder: 'Search courses...',
+    title: 'Computer Science Lectures',
+    searchPlaceholder: 'Search lectures...',
     instructor: 'Instructor',
     credits: 'Credits',
     prerequisites: 'Prerequisites',
-    selectPrompt: 'Select a course to see its details.',
+    selectPrompt: 'Select a lecture to see its details.',
   },
   de: {
-    searchPlaceholder: 'Kurse durchsuchen...',
+    title: 'Vorlesungen in Informatik',
+    searchPlaceholder: 'Vorlesungen durchsuchen...',
     instructor: 'Dozent',
     credits: 'Kredits',
     prerequisites: 'Voraussetzungen',
-    selectPrompt: 'Wählen Sie einen Kurs aus, um Details zu sehen.',
+    selectPrompt:
+      'Wählen Sie eine Vorlesung aus, um Details zu sehen.',
   },
   fr: {
-    searchPlaceholder: 'Chercher des cours...',
+    title: 'Conférences en informatique',
+    searchPlaceholder: 'Chercher des conférences...',
     instructor: 'Instructeur',
     credits: 'Crédits',
     prerequisites: 'Prérequis',
-    selectPrompt: 'Sélectionnez un cours pour voir ses détails.',
+    selectPrompt:
+      'Sélectionnez une conférence pour voir ses détails.',
   },
 };
 
@@ -306,10 +311,8 @@ const CourseSearch = () => {
             <option value="fr">Français</option>
           </select>
         </div>
-        <h1 className="text-4xl font-semibold mb-4">
-          {language === 'English'
-            ? 'University Courses'
-            : 'Universitätskurse'}
+        <h1 className="text-2xl mb-4">
+          {translations[language].title}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-white p-4 shadow-lg rounded-lg">
