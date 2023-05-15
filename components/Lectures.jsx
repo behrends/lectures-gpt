@@ -301,17 +301,21 @@ export default function Lectures() {
         onChange={(e) => setSearch(e.target.value)}
         className="mb-4 p-2 border border-gray-300 rounded-md w-full"
       />
-      <LectureList
-        lectures={lectureList.filter((lecture) =>
-          lecture.name.toLowerCase().includes(search.toLowerCase())
-        )}
-        selectedLecture={selectedLecture}
-        onSelectLecture={setSelectedLecture}
-      />
-      <LectureDetails
-        lecture={selectedLecture}
-        translation={translations[language]}
-      />
+      <div className="flex justify-between space-x-4">
+        <LectureList
+          lectures={lectureList.filter((lecture) =>
+            lecture.name.toLowerCase().includes(search.toLowerCase())
+          )}
+          selectedLecture={selectedLecture}
+          onSelectLecture={setSelectedLecture}
+          className="flex-1"
+        />
+        <LectureDetails
+          lecture={selectedLecture}
+          translation={translations[language]}
+          className="flex-1"
+        />
+      </div>
     </div>
   );
 }
