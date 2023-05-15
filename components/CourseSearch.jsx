@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import CourseDetails from './CourseDetails';
 
 const coursesByLanguage = {
-  English: [
+  en: [
     {
       id: 1,
       name: 'Introduction to Computer Science',
@@ -79,7 +79,7 @@ const coursesByLanguage = {
       prerequisites: ['Data Structures and Algorithms'],
     },
   ],
-  Deutsch: [
+  de: [
     {
       id: 1,
       name: 'Einführung in die Informatik',
@@ -156,7 +156,7 @@ const coursesByLanguage = {
       prerequisites: ['Datenstrukturen und Algorithmen'],
     },
   ],
-  Français: [
+  fr: [
     {
       id: 1,
       name: "Introduction à l'informatique",
@@ -260,14 +260,14 @@ const translations = {
 };
 
 const CourseSearch = () => {
+  const [language, setLanguage] = useState('de');
   const [search, setSearch] = useState('');
   const [filteredCourses, setFilteredCourses] = useState(
-    coursesByLanguage.Deutsch
+    coursesByLanguage[language]
   );
   const [selectedCourse, setSelectedCourse] = useState(null);
-  const [language, setLanguage] = useState('Deutsch');
   const [courseList, setCourseList] = useState(
-    coursesByLanguage.Deutsch
+    coursesByLanguage[language]
   );
 
   useEffect(() => {
@@ -301,9 +301,9 @@ const CourseSearch = () => {
             onChange={(e) => setLanguage(e.target.value)}
             className="border border-gray-300 rounded-md p-2 focus:border-blue-500 focus:outline-none"
           >
-            <option value="Deutsch">Deutsch</option>
-            <option value="English">English</option>
-            <option value="Français">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
           </select>
         </div>
         <h1 className="text-4xl font-semibold mb-4">
