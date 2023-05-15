@@ -225,7 +225,11 @@ const CourseSearch = () => {
               {filteredCourses.map((course) => (
                 <li
                   key={course.id}
-                  className="py-2 cursor-pointer hover:bg-gray-100"
+                  className={`py-2 cursor-pointer hover:bg-gray-100 ${
+                    selectedCourse && selectedCourse.id === course.id
+                      ? 'bg-blue-100'
+                      : ''
+                  }`}
                   onClick={() => handleCourseClick(course)}
                 >
                   {course.name}
