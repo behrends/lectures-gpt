@@ -4,6 +4,7 @@ export default function LectureDetails({ lecture, translation }) {
   return (
     <div className="p-4 border-2 rounded-lg border-red-600 bg-white">
       <h2 className="font-bold text-2xl mb-4">{lecture.name}</h2>
+      <p className="mb-2">{lecture.description}</p>
       <p className="mb-2">
         <span className="font-bold">{translation.instructor}: </span>
         {lecture.instructor}
@@ -17,10 +18,6 @@ export default function LectureDetails({ lecture, translation }) {
           {translation.prerequisites}:{' '}
         </span>
         {lecture.prerequisites.join(', ') || 'None'}
-      </p>
-      <p className="mb-2">
-        <span className="font-bold">{translation.description}: </span>
-        {lecture.description}
       </p>
     </div>
   );
