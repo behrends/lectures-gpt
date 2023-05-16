@@ -1,21 +1,21 @@
 export default function LectureList({
   lectures,
-  selectedLecture,
+  selectedLectureId,
   onSelectLecture,
 }) {
   return (
-    <div className="mb-4">
+    <ul>
       {lectures.map((lecture) => (
-        <div
+        <li
           key={lecture.id}
-          className={`p-4 border border-gray-300 rounded-md mb-2 ${
-            selectedLecture === lecture ? 'bg-gray-200' : ''
+          onClick={() => onSelectLecture(lecture.id)}
+          className={`p-4 border rounded mb-2 ${
+            selectedLectureId === lecture.id ? 'bg-blue-100' : ''
           }`}
-          onClick={() => onSelectLecture(lecture)}
         >
           {lecture.name}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

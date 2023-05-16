@@ -268,12 +268,16 @@ const translations = {
 export default function Lectures() {
   const [language, setLanguage] = useState('de');
   const [search, setSearch] = useState('');
-  const [selectedLecture, setSelectedLecture] = useState(null);
+  const [selectedLectureId, setSelectedLectureId] = useState(null);
   const [lectureList, setLectureList] = useState(lectures[language]);
 
   useEffect(() => {
     setLectureList(lectures[language]);
   }, [language]);
+
+  const selectedLecture = lectureList.find(
+    (lecture) => lecture.id === selectedLectureId
+  );
 
   return (
     <div className="container mx-auto p-4">
@@ -309,8 +313,8 @@ export default function Lectures() {
                 .toLowerCase()
                 .includes(search.toLowerCase())
             )}
-            selectedLecture={selectedLecture}
-            onSelectLecture={setSelectedLecture}
+            selectedLectureId={selectedLectureId}
+            onSelectLecture={setSelectedLectureId}
           />
         </div>
         <div className="w-2/3">
