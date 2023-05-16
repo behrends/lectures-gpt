@@ -9,11 +9,13 @@ export default function LectureList({
         <li
           key={lecture.id}
           onClick={() => onSelectLecture(lecture.id)}
-          className={`p-4 border rounded mb-2 ${
-            selectedLectureId === lecture.id ? 'bg-blue-100' : ''
+          className={`p-4 border-2 rounded-lg mb-4 cursor-pointer ${
+            selectedLectureId === lecture.id
+              ? 'border-blue-500'
+              : 'border-gray-300'
           }`}
         >
-          {lecture.name}
+          <h2 className="font-bold text-lg">{lecture.name}</h2>
         </li>
       ))}
     </ul>

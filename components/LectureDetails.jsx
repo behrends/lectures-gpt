@@ -1,23 +1,27 @@
 export default function LectureDetails({ lecture, translation }) {
-  return lecture ? (
-    <div className="p-4 border border-gray-300 rounded-md">
-      <h2 className="text-xl mb-2">{lecture.name}</h2>
-      <p>{lecture.description}</p>
-      <p>
-        <strong>{translation.instructor}:</strong>{' '}
+  if (!lecture) return <div>Please select a lecture</div>;
+
+  return (
+    <div className="p-4 border-2 rounded-lg border-gray-300 bg-white">
+      <h2 className="font-bold text-2xl mb-4">{lecture.name}</h2>
+      <p className="mb-2">
+        <span className="font-bold">{translation.instructor}: </span>
         {lecture.instructor}
       </p>
-      <p>
-        <strong>{translation.credits}:</strong> {lecture.credits}
+      <p className="mb-2">
+        <span className="font-bold">{translation.credits}: </span>
+        {lecture.credits}
       </p>
-      <p>
-        <strong>{translation.prerequisites}:</strong>{' '}
-        {lecture.prerequisites.length > 0
-          ? lecture.prerequisites.join(', ')
-          : 'None'}
+      <p className="mb-2">
+        <span className="font-bold">
+          {translation.prerequisites}:{' '}
+        </span>
+        {lecture.prerequisites.join(', ') || 'None'}
+      </p>
+      <p className="mb-2">
+        <span className="font-bold">{translation.description}: </span>
+        {lecture.description}
       </p>
     </div>
-  ) : (
-    <p>{translation.selectPrompt}</p>
   );
 }

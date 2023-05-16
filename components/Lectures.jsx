@@ -281,16 +281,16 @@ export default function Lectures() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl mb-4">
+      <h1 className="text-4xl font-bold mb-8">
         {translations[language].title}
       </h1>
-      <div className="mb-4">
-        <label>
+      <div className="mb-8">
+        <label className="text-lg">
           Language:
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-            className="ml-2"
+            className="ml-2 p-2 border border-gray-300 rounded-md"
           >
             <option value="en">English</option>
             <option value="de">Deutsch</option>
@@ -303,10 +303,10 @@ export default function Lectures() {
         placeholder={translations[language].searchPlaceholder}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="mb-4 p-2 border border-gray-300 rounded-md w-full"
+        className="mb-8 p-2 border border-gray-300 rounded-md w-full"
       />
-      <div className="flex justify-between space-x-4">
-        <div className="w-1/3">
+      <div className="flex justify-between space-x-8">
+        <div className="w-1/2">
           <LectureList
             lectures={lectureList.filter((lecture) =>
               lecture.name
@@ -317,7 +317,7 @@ export default function Lectures() {
             onSelectLecture={setSelectedLectureId}
           />
         </div>
-        <div className="w-2/3">
+        <div className="w-1/2">
           <LectureDetails
             lecture={selectedLecture}
             translation={translations[language]}
