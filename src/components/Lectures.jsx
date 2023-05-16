@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from 'react';
 import LectureDetails from './LectureDetails';
 import LectureList from './LectureList';
