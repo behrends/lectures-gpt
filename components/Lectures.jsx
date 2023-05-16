@@ -266,7 +266,7 @@ const translations = {
 };
 
 export default function Lectures() {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('de');
   const [search, setSearch] = useState('');
   const [selectedLecture, setSelectedLecture] = useState(null);
   const [lectureList, setLectureList] = useState(lectures[language]);
