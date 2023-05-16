@@ -302,19 +302,23 @@ export default function Lectures() {
         className="mb-4 p-2 border border-gray-300 rounded-md w-full"
       />
       <div className="flex justify-between space-x-4">
-        <LectureList
-          lectures={lectureList.filter((lecture) =>
-            lecture.name.toLowerCase().includes(search.toLowerCase())
-          )}
-          selectedLecture={selectedLecture}
-          onSelectLecture={setSelectedLecture}
-          className="flex-1"
-        />
-        <LectureDetails
-          lecture={selectedLecture}
-          translation={translations[language]}
-          className="flex-1"
-        />
+        <div className="w-1/3">
+          <LectureList
+            lectures={lectureList.filter((lecture) =>
+              lecture.name
+                .toLowerCase()
+                .includes(search.toLowerCase())
+            )}
+            selectedLecture={selectedLecture}
+            onSelectLecture={setSelectedLecture}
+          />
+        </div>
+        <div className="w-2/3">
+          <LectureDetails
+            lecture={selectedLecture}
+            translation={translations[language]}
+          />
+        </div>
       </div>
     </div>
   );
