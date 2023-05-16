@@ -303,7 +303,7 @@ export default function Lectures() {
         placeholder={translations[language].searchPlaceholder}
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="mb-8 p-2 border border-gray-300 rounded-md w-full"
+        className="cursor-pointer mb-8 p-2 border border-gray-300 focus:outline-none focus:border-red-600 rounded-md w-full"
       />
       <div className="flex justify-between space-x-8">
         <div className="w-1/2">

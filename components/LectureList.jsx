@@ -11,7 +11,7 @@ export default function LectureList({
           onClick={() => onSelectLecture(lecture.id)}
           className={`p-4 border-2 rounded-lg mb-4 cursor-pointer ${
             selectedLectureId === lecture.id
-              ? 'border-blue-500'
+              ? 'border-red-600'
               : 'border-gray-300'
           }`}
         >
