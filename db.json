@@ -1,0 +1,62 @@
+{
+  "lectures": [
+    {
+      "title": "Programmieren",
+      "ectsPoints": "9",
+      "moduleNumber": "T3INF1004",
+      "units": [
+        {
+          "unitTitle": "Programmieren I",
+          "timeInHours": "48",
+          "unitNumber": "T3INF1004.1"
+        },
+        {
+          "unitTitle": "Programmieren II",
+          "timeInHours": "48",
+          "unitNumber": "T3INF1004.2"
+        }
+      ]
+    },
+    {
+      "title": "Web Engineering",
+      "ectsPoints": "3",
+      "moduleNumber": "T3INF4101",
+      "units": [
+        {
+          "unitTitle": "Web-Engineering I",
+          "timeInHours": "36",
+          "unitNumber": "T3INF4101.1"
+        },
+        {
+          "unitTitle": "Labor Web-Eng. I",
+          "timeInHours": "12",
+          "unitNumber": "T3INF4101.2"
+        }
+      ]
+    },
+    {
+      "title": "Theoretische Informatik I",
+      "ectsPoints": "5",
+      "moduleNumber": "T3INF1002",
+      "units": [
+        {
+          "unitTitle": "Grundlagen und Logik",
+          "timeInHours": "60",
+          "unitNumber": "T3INF1002.1"
+        }
+      ]
+    },
+    {
+      "title": "Technische Informatik I",
+      "ectsPoints": "5",
+      "moduleNumber": "T3INF1006",
+      "units": [
+        {
+          "unitTitle": "Digitaltechnik",
+          "timeInHours": "48",
+          "unitNumber": "T3INF1006.1"
+        }
+      ]
+    }
+  ]
+}
