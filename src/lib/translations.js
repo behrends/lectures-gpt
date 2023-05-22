@@ -2,6 +2,7 @@ const translations = {
   en: {
     title: 'Computer Science Lectures',
     searchPlaceholder: 'Search lectures...',
+    language: 'Language',
     instructor: 'Instructor',
     credits: 'Credits',
     prerequisites: 'Prerequisites',
@@ -10,6 +11,7 @@ const translations = {
   de: {
     title: 'Vorlesungen in Informatik',
     searchPlaceholder: 'Vorlesungen durchsuchen...',
+    language: 'Sprache',
     instructor: 'Dozent',
     credits: 'Kredits',
     prerequisites: 'Voraussetzungen',
@@ -19,6 +21,7 @@ const translations = {
   fr: {
     title: 'Conférences en informatique',
     searchPlaceholder: 'Chercher des conférences...',
+    language: 'Langue',
     instructor: 'Instructeur',
     credits: 'Crédits',
     prerequisites: 'Prérequis',

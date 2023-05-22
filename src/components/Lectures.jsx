@@ -26,7 +26,7 @@ export default function Lectures() {
       </h1>
       <div className="mb-8">
         <label className="text-lg">
-          Language:
+          {translations[language].language}
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
