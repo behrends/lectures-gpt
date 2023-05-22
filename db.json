@@ -1,62 +1,245 @@
 {
-  "lectures": [
-    {
-      "title": "Programmieren",
-      "ectsPoints": "9",
-      "moduleNumber": "T3INF1004",
-      "units": [
+  "lectures": {
+    "practice": [],
+    "informatics": {
+      "semester1": [
         {
-          "unitTitle": "Programmieren I",
-          "timeInHours": "48",
-          "unitNumber": "T3INF1004.1"
+          "title": "Programmieren",
+          "ectsPoints": "9",
+          "moduleNumber": "T3INF1004",
+          "units": [
+            {
+              "unitTitle": "Programmieren I",
+              "timeInHours": "48",
+              "unitNumber": "T3INF1004.1"
+            },
+            {
+              "unitTitle": "Programmieren II",
+              "timeInHours": "48",
+              "unitNumber": "T3INF1004.2"
+            }
+          ]
         },
         {
-          "unitTitle": "Programmieren II",
-          "timeInHours": "48",
-          "unitNumber": "T3INF1004.2"
-        }
-      ]
-    },
-    {
-      "title": "Web Engineering",
-      "ectsPoints": "3",
-      "moduleNumber": "T3INF4101",
-      "units": [
-        {
-          "unitTitle": "Web-Engineering I",
-          "timeInHours": "36",
-          "unitNumber": "T3INF4101.1"
+          "title": "Web Engineering",
+          "ectsPoints": "3",
+          "moduleNumber": "T3INF4101",
+          "units": [
+            {
+              "unitTitle": "Web-Engineering I",
+              "timeInHours": "36",
+              "unitNumber": "T3INF4101.1"
+            },
+            {
+              "unitTitle": "Labor Web-Eng. I",
+              "timeInHours": "12",
+              "unitNumber": "T3INF4101.2"
+            }
+          ]
         },
         {
-          "unitTitle": "Labor Web-Eng. I",
-          "timeInHours": "12",
-          "unitNumber": "T3INF4101.2"
+          "title": "Theoretische Informatik I",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF1002",
+          "units": [
+            {
+              "unitTitle": "Grundlagen und Logik",
+              "timeInHours": "60",
+              "unitNumber": "T3INF1002.1"
+            }
+          ]
+        },
+        {
+          "title": "Technische Informatik I",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF1006",
+          "units": [
+            {
+              "unitTitle": "Digitaltechnik",
+              "timeInHours": "48",
+              "unitNumber": "T3INF1006.1"
+            }
+          ]
+        }
+      ],
+      "semester2": [
+        {
+          "title": "Programmiersprachen",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF4141",
+          "units": [
+            {
+              "unitTitle": "Programmiersprachen",
+              "timeInHours": "84",
+              "unitNumber": "T3INF4141.1"
+            }
+          ]
+        },
+        {
+          "title": "Projekt Informatik",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF4103",
+          "units": [
+            {
+              "unitTitle": "Anwendungsprojekt Informatik",
+              "timeInHours": "72",
+              "unitNumber": "T3INF4103.1"
+            }
+          ]
+        },
+        {
+          "title": "Theoretische Informatik II",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF1003",
+          "units": [
+            {
+              "unitTitle": "Algorithmen und Komplexität",
+              "timeInHours": "48",
+              "unitNumber": "T3INF1003.1"
+            }
+          ]
+        }
+      ],
+      "semester3": [
+        {
+          "title": "Software Engineering I",
+          "ectsPoints": "9",
+          "moduleNumber": "T3INF2003",
+          "units": [
+            {
+              "unitTitle": "Grundlagen des Software Engineering I",
+              "timeInHours": "36",
+              "unitNumber": "T3INF2003.1"
+            }
+          ]
+        },
+        {
+          "title": "Kommunikations- und Netztechnik",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF2006",
+          "units": [
+            {
+              "unitTitle": "Netztechnik",
+              "timeInHours": "36",
+              "unitNumber": "T3INF2006.1"
+            },
+            {
+              "unitTitle": "Labor",
+              "timeInHours": "12",
+              "unitNumber": "T3INF2006.2"
+            }
+          ]
+        },
+        {
+          "title": "Technische Informatik II",
+          "ectsPoints": "8",
+          "moduleNumber": "T3INF2005",
+          "units": [
+            {
+              "unitTitle": "Betriebssysteme",
+              "timeInHours": "36",
+              "unitNumber": "T3INF2005.2"
+            },
+            {
+              "unitTitle": "Rechnerarchitektur",
+              "timeInHours": "36",
+              "unitNumber": "T3INF2005.1"
+            },
+            {
+              "unitTitle": "Systemnahe Programmierung I",
+              "timeInHours": "24",
+              "unitNumber": "T3INF2005.3"
+            }
+          ]
+        }
+      ],
+      "semester4": [
+        {
+          "title": "Software Engineering I",
+          "ectsPoints": "9",
+          "moduleNumber": "T3INF2003",
+          "units": [
+            {
+              "unitTitle": "Grundlagen des Software Engineering II",
+              "timeInHours": "60",
+              "unitNumber": "T3INF2003.2"
+            }
+          ]
+        },
+        {
+          "title": "Datenbanken I",
+          "ectsPoints": "6",
+          "moduleNumber": "T3INF2004",
+          "units": [
+            {
+              "unitTitle": "Grundlagen der Datenbanken",
+              "timeInHours": "72",
+              "unitNumber": "T3INF2004.1"
+            }
+          ]
+        },
+        {
+          "title": "Theoretische Informatik III",
+          "ectsPoints": "6",
+          "moduleNumber": "T3INF2002",
+          "units": [
+            {
+              "unitTitle": "Compilerbau",
+              "timeInHours": "24",
+              "unitNumber": "T3INF2002.3"
+            },
+            {
+              "unitTitle": "Automaten, Formale Sprachen",
+              "timeInHours": "48",
+              "unitNumber": "T3INF2002.2"
+            }
+          ]
+        },
+        {
+          "title": "IT-Sicherheit",
+          "ectsPoints": "5",
+          "moduleNumber": "T3INF3002",
+          "units": [
+            {
+              "unitTitle": "IT-Systemsicherheit",
+              "timeInHours": "48",
+              "unitNumber": "T3INF3002.1"
+            }
+          ]
         }
       ]
     },
-    {
-      "title": "Theoretische Informatik I",
-      "ectsPoints": "5",
-      "moduleNumber": "T3INF1002",
-      "units": [
+    "digitalTransformation": {},
+    "basics": {
+      "semester1": [
         {
-          "unitTitle": "Grundlagen und Logik",
-          "timeInHours": "60",
-          "unitNumber": "T3INF1002.1"
+          "title": "Mathematik I",
+          "ectsPoints": "8",
+          "moduleNumber": "T3INF1001",
+          "units": [
+            {
+              "unitTitle": "Analysis",
+              "timeInHours": "48",
+              "unitNumber": "T3INF1001.2"
+            }
+          ]
+        }
+      ],
+      "semester2": [
+        {
+          "title": "Mathematik I",
+          "ectsPoints": "8",
+          "moduleNumber": "T3INF1001",
+          "units": [
+            {
+              "unitTitle": "Lineare Algebra",
+              "timeInHours": "48",
+              "unitNumber": "T3INF1001.1"
+            }
+          ]
         }
       ]
     },
-    {
-      "title": "Technische Informatik I",
-      "ectsPoints": "5",
-      "moduleNumber": "T3INF1006",
-      "units": [
-        {
-          "unitTitle": "Digitaltechnik",
-          "timeInHours": "48",
-          "unitNumber": "T3INF1006.1"
-        }
-      ]
-    }
-  ]
+    "specialization": {}
+  }
 }
