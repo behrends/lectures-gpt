@@ -1,5 +1,5 @@
 export default function LectureDetails({ lecture, translation }) {
-  if (!lecture) return <div>Please select a lecture</div>;
+  if (!lecture) return <div>{translation.selectLecture}</div>;
 
   return (
     <div className="p-4 border-2 rounded-lg border-red-600 bg-white">
