@@ -2,7 +2,7 @@ Die React-Komponenten in diesem Projekt wurden fast ausschließlich
 mit ChatGPT-4 entwickelt. Nur kleinere manuelle Anpassungen wurden
 vorgenommen.
 
-Der [Chat-Verlauf](https://chat.openai.com/share/0bb519c5-0eff-4683-a9bc-7171dd5bdfe4) kann in ChatGPT 4 nachvollzogen werden.
+Ein Teil des [Chat-Verlaufs](https://chat.openai.com/share/a1157ad9-37ca-4813-82cb-421234071307) kann in ChatGPT 4 nachvollzogen werden.
 
 Das Beispiel-Projekt wurde mit [Next.js](https://nextjs.org/) umgesetzt.
 
