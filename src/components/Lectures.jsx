@@ -6,7 +6,7 @@ import translations from '@/lib/translations';
 import lectures from '@/lib/data';
 
 export default function Lectures() {
-  const [language, setLanguage] = useState('de');
+  const [language, setLanguage] = useState('en');
   const [search, setSearch] = useState('');
   const [selectedLectureId, setSelectedLectureId] = useState(null);
   const [lectureList, setLectureList] = useState(lectures[language]);
