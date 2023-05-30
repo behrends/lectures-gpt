@@ -1,5 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
+import CourseSelection from './CourseSelection';
 import LectureDetails from './LectureDetails';
 import LectureList from './LectureList';
 import translations from '@/lib/translations';
@@ -21,6 +22,9 @@ export default function Lectures() {
 
   return (
     <div className="container mx-auto p-4">
+      <div className="mb-4">
+        <CourseSelection translation={translations[language]} />
+      </div>
       <div className="flex justify-between items-start mb-8">
         <h1 className="text-4xl font-bold">
           {translations[language].title}

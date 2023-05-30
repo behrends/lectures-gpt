@@ -8,6 +8,7 @@ const translations = {
     prerequisites: 'Prerequisites',
     selectPrompt: 'Select a lecture to see its details.',
     selectLecture: 'Please select a lecture',
+    selectCourse: 'Select a course...',
   },
   de: {
     title: 'Vorlesungen in Informatik',
@@ -19,6 +20,7 @@ const translations = {
     selectPrompt:
       'Wählen Sie eine Vorlesung aus, um Details zu sehen.',
     selectLecture: 'Bitte wählen Sie eine Vorlesung',
+    selectCourse: 'Wählen Sie einen Kurs...',
   },
   fr: {
     title: 'Conférences en informatique',
@@ -30,6 +32,7 @@ const translations = {
     selectPrompt:
       'Sélectionnez une conférence pour voir ses détails.',
     selectLecture: 'Veuillez sélectionner une conférence',
+    selectCourse: 'Sélectionnez un cours...',
   },
 };
 
