@@ -17,7 +17,7 @@ export default function LectureDetails({ lecture, translation }) {
         <span className="font-bold">
           {translation.prerequisites}:{' '}
         </span>
-        {lecture.prerequisites.join(', ') || 'None'}
+        {lecture.prerequisites.join(', ') || translation.none}
       </p>
     </div>
   );

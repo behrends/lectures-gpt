@@ -2,6 +2,7 @@ const translations = {
   en: {
     title: 'Computer Science Lectures',
     searchPlaceholder: 'Search lectures...',
+    none: 'None',
     language: 'Language',
     instructor: 'Instructor',
     credits: 'Credits',
@@ -12,6 +13,7 @@ const translations = {
   de: {
     title: 'Vorlesungen in Informatik',
     searchPlaceholder: 'Vorlesungen durchsuchen...',
+    none: 'Keine',
     language: 'Sprache',
     instructor: 'Dozent',
     credits: 'Kredits',
@@ -23,6 +25,7 @@ const translations = {
   fr: {
     title: 'Conférences en informatique',
     searchPlaceholder: 'Chercher des conférences...',
+    none: 'Aucun',
     language: 'Langue',
     instructor: 'Instructeur',
     credits: 'Crédits',
