@@ -29,11 +29,11 @@ export default function Lectures() {
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
-            className="ml-2 p-2 border border-gray-300 rounded-md"
+            className="p-1 border border-gray-300 rounded-md"
           >
-            <option value="en">English</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
+            <option value="en">EN</option>
+            <option value="de">DE</option>
+            <option value="fr">FR</option>
           </select>
         </div>
       </div>
