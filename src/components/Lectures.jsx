@@ -21,12 +21,11 @@ export default function Lectures() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold mb-8">
-        {translations[language].title}
-      </h1>
-      <div className="mb-8">
-        <label className="text-lg">
-          {translations[language].language}
+      <div className="flex justify-between items-start mb-8">
+        <h1 className="text-4xl font-bold">
+          {translations[language].title}
+        </h1>
+        <div>
           <select
             value={language}
             onChange={(e) => setLanguage(e.target.value)}
@@ -36,7 +35,7 @@ export default function Lectures() {
             <option value="de">Deutsch</option>
             <option value="fr">Français</option>
           </select>
-        </label>
+        </div>
       </div>
       <input
         type="text"
